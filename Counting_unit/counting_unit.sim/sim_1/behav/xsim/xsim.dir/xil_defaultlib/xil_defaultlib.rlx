@@ -1,0 +1,15 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+E:/Codes/Vivado/Counting_unit/counting_unit.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sim_1/new/total_tb.v,1669017325,verilog,,,,total_tb,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/batch_monitor.v,1668786885,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/baud_gen.v,,batch_monitor,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/baud_gen.v,1666162226,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/count_pulses.v,,baud_gen,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/count_pulses.v,1668786758,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/listen.v,,count_pulses,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/listen.v,1668595622,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/out_select_mux.v,,listen,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/out_select_mux.v,1669017602,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/output_shuffle.v,,out_select_mux,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/output_shuffle.v,1669015347,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/send_byte.v,,output_shuffle,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/send_byte.v,1668784213,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/three_fold_coincidence.v,,send_byte,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/three_fold_coincidence.v,1668511213,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/two_fold_coincidence.v,,three_fold_coincidence,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,
+E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sources_1/new/two_fold_coincidence.v,1668510338,verilog,,E:/Codes/Vivado/Counting_unit/counting_unit.srcs/sim_1/new/total_tb.v,,two_fold_coincidence,,,../../../../counting_unit.gen/sources_1/ip/clk_wiz_0_2,,,,,

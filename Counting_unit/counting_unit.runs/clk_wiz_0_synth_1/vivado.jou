@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Nov 21 14:45:19 2022
+# Process ID: 6176
+# Current directory: E:/Codes/Vivado/Counting_unit/counting_unit.runs/clk_wiz_0_synth_1
+# Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+# Log file: E:/Codes/Vivado/Counting_unit/counting_unit.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: E:/Codes/Vivado/Counting_unit/counting_unit.runs/clk_wiz_0_synth_1\vivado.jou
+# Running On: PHY-100057LT, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 4, Host memory: 8419 MB
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace
