@@ -23,7 +23,7 @@
 module listen(
     input clk,
     input raw_signal,
-    output wire out_pulse
+    output out_pulse
     );
     
     integer dead_time;
