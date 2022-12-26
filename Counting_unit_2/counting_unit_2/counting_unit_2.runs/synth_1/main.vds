@@ -1,0 +1,270 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec 21 13:05:14 2022
+# Process ID: 3676
+# Current directory: G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.runs/synth_1
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.runs/synth_1/main.vds
+# Journal file: G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.runs/synth_1\vivado.jou
+# Running On: PHY-107106DT, OS: Windows, CPU Frequency: 3408 MHz, CPU Physical cores: 4, Host memory: 17049 MB
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.srcs/utils_1/imports/synth_1/main.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.srcs/utils_1/imports/synth_1/main.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top main -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9868
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1272.000 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/main.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.runs/synth_1/.Xil/Vivado-3676-PHY-107106DT/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.runs/synth_1/.Xil/Vivado-3676-PHY-107106DT/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'baud_gen' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/baud_gen.v:23]
+	Parameter baud_rate bound to: 4000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'baud_gen' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/baud_gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'listen' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/listen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'listen' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/listen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'two_fold_coincidence' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/two_fold_coincidence.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'two_fold_coincidence' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/two_fold_coincidence.v:23]
+INFO: [Synth 8-6157] synthesizing module 'three_fold_coincidence' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/three_fold_coincidence.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'three_fold_coincidence' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/three_fold_coincidence.v:23]
+WARNING: [Synth 8-7071] port 'clk' of module 'three_fold_coincidence' is unconnected for instance 'raw_ABBP' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/main.v:51]
+WARNING: [Synth 8-7023] instance 'raw_ABBP' of module 'three_fold_coincidence' has 5 connections declared, but only 4 given [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/main.v:51]
+INFO: [Synth 8-6157] synthesizing module 'count_pulses' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/count_pulses.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count_pulses' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/count_pulses.v:23]
+INFO: [Synth 8-6157] synthesizing module 'out_select_mux' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/out_select_mux.v:23]
+WARNING: [Synth 8-567] referenced signal 'header' should be on the sensitivity list [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/out_select_mux.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'out_select_mux' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/out_select_mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'batch_monitor' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/batch_monitor.v:23]
+	Parameter batch_size bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'batch_monitor' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/batch_monitor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'output_shuffle' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/output_shuffle.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'output_shuffle' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/output_shuffle.v:23]
+INFO: [Synth 8-6157] synthesizing module 'send_byte' [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/send_byte.v:23]
+	Parameter data_bits bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'send_byte' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/send_byte.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/sources_1/new/main.v:23]
+WARNING: [Synth 8-7129] Port clk in module three_fold_coincidence is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.000 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.000 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1272.000 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1272.000 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [g:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Finished Parsing XDC File [g:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Parsing XDC File [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/constrs_1/imports/Nexys A7 Resources/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/constrs_1/imports/Nexys A7 Resources/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/Bilal/Git/coincidence_counting_fpga/Counting_unit/counting_unit.srcs/constrs_1/imports/Nexys A7 Resources/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.672 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1285.672 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in. (constraint file  g:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in. (constraint file  g:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for instance_name. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 10    
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 19    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1285.672 ; gain = 13.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |BUFG    |     1|
+|3     |CARRY4  |    48|
+|4     |LUT1    |    13|
+|5     |LUT2    |   276|
+|6     |LUT3    |    36|
+|7     |LUT4    |    21|
+|8     |LUT5    |    30|
+|9     |LUT6    |    66|
+|10    |MUXF7   |     2|
+|11    |MUXF8   |     1|
+|12    |FDRE    |   355|
+|13    |FDSE    |     1|
+|14    |IBUF    |     4|
+|15    |OBUF    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1291.910 ; gain = 6.238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.910 ; gain = 19.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1303.953 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: a2a16376
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1307.648 ; gain = 35.648
+INFO: [Common 17-1381] The checkpoint 'G:/Bilal/FPGA/VivadoCodes/Dump/Counting_unit_2/counting_unit_2/counting_unit_2.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 21 13:06:01 2022...
