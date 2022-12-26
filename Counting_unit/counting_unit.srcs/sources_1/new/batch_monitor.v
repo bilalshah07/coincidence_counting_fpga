@@ -23,10 +23,12 @@
 module batch_monitor #(parameter batch_size = 10, baud_rate = 4_000_000) (
     input clk,
     input [3:0] selection,
-    output reg batch_done
+    output tick
     );
     
     reg [7:0] packet_bit_count;
+    
+    reg batch_done;
     
     always @ (posedge clk)
     begin
@@ -54,5 +56,7 @@ module batch_monitor #(parameter batch_size = 10, baud_rate = 4_000_000) (
         batch_done = 0;
         packet_bit_count = 1;
     end
+    
+    assign tick = batch_done;
     
 endmodule

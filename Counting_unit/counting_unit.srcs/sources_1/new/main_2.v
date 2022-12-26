@@ -36,9 +36,10 @@ module main_2(
                                             
     data_counting_and_updating step_2 (.pulse_A(pulse_A), .pulse_B(pulse_B), .pulse_BP(pulse_BP), .pulse_AP(pulse_AP), .pulse_AB(pulse_AB), .pulse_ABP(pulse_ABP), .pulse_APB(pulse_APB), .pulse_APBP(pulse_APBP), .pulse_ABBP(pulse_ABBP), .batch_done(batch_done), .clk(clk),
                                         .counts_A(counts_A), .counts_B(counts_B), .counts_BP(counts_BP), .counts_AP(counts_AP), .counts_AB(counts_AB), .counts_ABP(counts_ABP), .counts_APB(counts_APB), .counts_APBP(counts_APBP), .counts_ABBP(counts_ABBP));                                    
-    
-    batch_monitor monitor (.clk(clk), .selection(selection), .batch_done(batch_done));
-    
+        
     send_data_to_serial step_3 (.counts_A(counts_A), .counts_B(counts_B), .counts_BP(counts_BP), .counts_AP(counts_AP), .counts_AB(counts_AB), .counts_ABP(counts_ABP), .counts_APB(counts_APB), .counts_APBP(counts_APBP), .counts_ABBP(counts_ABBP), .tx(tx), .selection(selection), .clk(clk));
+    
+    batch_monitor monitor (.clk(clk), .selection(selection), .tick(batch_done));
+
     
 endmodule
