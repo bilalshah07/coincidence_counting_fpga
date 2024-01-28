@@ -1,0 +1,1 @@
+These source files are to be used with Xilinx Vivado. Import these files a part of your project. Take the codes through necesssacy compilation steps, and you will end up with a .bit file that you can use to program the FPGA.
