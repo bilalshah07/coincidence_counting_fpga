@@ -1,3 +1,0 @@
-clk_400_clk_wiz.v,verilog,xil_defaultlib,../../../../counting_unit.gen/sources_1/ip/clk_400_1/clk_400_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
-clk_400.v,verilog,xil_defaultlib,../../../../counting_unit.gen/sources_1/ip/clk_400_1/clk_400.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
-glbl.v,Verilog,xil_defaultlib,glbl.v
