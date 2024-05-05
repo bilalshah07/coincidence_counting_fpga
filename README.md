@@ -52,4 +52,31 @@ So far, we have detected, processed, and stored the data on the FPGA. Now, we ne
 
 ![UART sub-module hierarchy.](readme/UART_chart.png)
 
+### baud_gen
+The UART data communication protocol is asynchronous because there is no external clock signal to ensure the two communicating devices work in temporal synchronization with each other. Instead, for successful communication, the two devices should have a prior agreement on the rate at which they want to communicate. This communication rate for the UART channel is known as the _baud rate_. The two devices need to ensure communication at this rate using their independent clocks. For the FPGA side’s _baud rate clock_, we make another module. This module will take in the FPGA clock signal, wait for a specific number of clock cycles, and output a logical high when this number is reached. We will call this output the baud rate clock.
+
+In single photon laboratories, high-speed communication between the CCU and the PC is required, so we set the baud rate to the highest value available. In our current implementation, the target baud rate is 4 MHz. Considering our input FPGA clock of 100 MHz, we assign the value 25 to a variable. This module counts the rising edges of the FPGA clock signal until it reaches 25 and outputs a pulse once it does. This way, we have generated a baud rate clock for the FPGA. This process is an example of down-sampling, and the figure below provides its visual representation.
+
+![Clock down-sampling.](readme/baud_gen.png)
+
+### send_byte
+Unlike the rest of the modules we have come across so far, this module has two triggers instead of one. It gets triggered whenever there is a change in the data bits or whenever the baud rate clock has a rising edge. Upon a data-update trigger, it takes the newly available data bits and creates a data packet by enclosing them in the start and stop bits. Whereas for each rising edge trigger, this module sends a single bit from the data packet to the transmission channel. This way, the data packet is sent to the PC bit by bit at the specified baud rate. Ten rising edges of the baud clock will result in the transmission of the whole packet.
+
+Other than sending the data over to the communication channel, this module also outputs a pulse to signal for the completion of a packet transfer – we will call this completion pulse the _done signal_. This done signal will be used in the **data_selection** module to stimulate a change in the data bits. New data bits will trigger the **send_byte** module again, and it will make a new data packet to transfer.
+
+### data_selection
+This module changes the data bits being fed to the **send_byte** module. We have nine data values that we need to send over to the PC. Additionally, we also send a header to mark the start of a batch of data packets. These ten values are stored in 8-bit registers and will be sent to the PC one by one. Transmission starts with the header, and the rest of the packets are sent in a specific order, as illustrated in the figure below. To choose which packet to send, we add all nine data registers on the inputs of a LUT. Altering the selection input will change the data bits being output by the LUT. A LUT can easily be implemented using case statements Verilog.
+
+![Packet order.](readme/com_order.png)
+
+This module gets triggered at the rising edge of the done tick being received from the **send_byte** module. Upon each trigger, the selection input of the LUT gets updated. The value of selection input varies from 0 to 9 in a loop, covering all the ten values in a batch. The selection input is also shared with the batch monitor module that maintains the workflow of our circuitry.
+
+## main
+The main module sits at the top of the module hierarchy. By this point, we have developed all the required low-level modules; now, we just need to join them together in a single module to complete our CCU’s implementation. Said differently, we need to define the interconnects between the three core modules and the batch monitor. There is no need to instantiate the hierarchically lower modules separately, as they are already part of the core modules.
+
+# Compiling the project
+I compile the project, import all of the Verilog files in Xilinx Vivado, make the **main** module the hierarchically highest, and follow the compilation steps in Vivado. To see how to execute these steps, you may watch this [tutorial](https://www.youtube.com/watch?v=v4i8pp1eahQ) by [Aleksandar Haber](https://github.com/AleksandarHaber).
+
+To learn how UART communication works, you may refer to this small article of mine: [What is UART serial communication protocol?](https://www.educative.io/answers/what-is-uart-serial-communication-protocol)
+
 In case of any confusion, feel free to reach out at bilal.samurai@gmail.com
