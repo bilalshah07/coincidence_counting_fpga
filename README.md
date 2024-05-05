@@ -77,6 +77,6 @@ The main module sits at the top of the module hierarchy. By this point, we have 
 # Compiling the project
 I compile the project, import all of the Verilog files in Xilinx Vivado, make the **main** module the hierarchically highest, and follow the compilation steps in Vivado. To see how to execute these steps, you may watch this [tutorial](https://www.youtube.com/watch?v=v4i8pp1eahQ) by [Aleksandar Haber](https://github.com/AleksandarHaber).
 
-To learn how UART communication works, you may refer to this small article of mine: [What is UART serial communication protocol?](https://www.educative.io/answers/what-is-uart-serial-communication-protocol)
+To learn more about how UART communication works, you may refer to this small article of mine: [What is UART serial communication protocol?](https://www.educative.io/answers/what-is-uart-serial-communication-protocol)
 
 In case of any confusion, feel free to reach out at bilal.samurai@gmail.com
