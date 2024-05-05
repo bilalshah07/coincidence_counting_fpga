@@ -50,5 +50,6 @@ Like our detection and processing modules, each sub-module in this core module a
 ## Core 3
 So far, we have detected, processed, and stored the data on the FPGA. Now, we need to send this data to a PC where it can be displayed, stored, or processed as required. In digital communication channels, data is transferred in bits. The two devices about to communicate should agree upon a mutually agreed rule of communication (a communication protocol). We chose the universal asynchronous receiver transmitter (UART) protocol to send data over to the PC. This section will discuss the nitty gritty for successful communication using UART. Our implementation will be a one-way communication channel from the FPGA to the PC. We will divide our third core module **send_data_to_serial** into three portions and, hence, three hierarchically lower modules, as illustrated in the image below.
 
+![UART sub-module hierarchy.](readme/UART_chart.png)
 
 In case of any confusion, feel free to reach out at bilal.samurai@gmail.com
